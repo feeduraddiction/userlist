@@ -1,0 +1,36 @@
+.button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	font-weight: 500;
+	transition: 0.4s ease;
+	border-radius: 8px;
+	padding: 12px 24px;
+	font-size: 16px;
+    white-space: nowrap;
+}
+
+.success {
+	background-color: var(--main-blue-800);
+	color: var(--white);
+	svg {
+		fill: var(--white);
+	}
+	&:hover {
+		background-color: var(--main-blue-700);
+	}
+}
+
+.error {
+	background-color: var(--red-600);
+	color: var(--white);
+	svg {
+		fill: var(--white);
+	}
+	&:hover {
+		background-color: var(--red-500);
+	}
+}
