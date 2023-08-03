@@ -33,7 +33,7 @@
 }
 
 .deleteItem {
-    cursor: pointer;
+	cursor: pointer;
 	border: none;
 	outline: none;
 	height: 100%;
@@ -42,8 +42,46 @@
 	right: 0;
 	background-color: var(--red-600);
 	transform: translateX(100px);
-	transition: 0.4s ease;
-    svg {
-        fill: var(--white);
-    }
+	transition: transform 0.4s ease;
+	svg {
+		fill: var(--white);
+	}
+}
+
+@media (max-width: 500px) {
+	.userItem {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.deleteItem {
+		height: 40px;
+		width: 40px;
+		right: 25px;
+		top: 25px;
+		background-color: transparent;
+		transform: translateX(0);
+		svg {
+			fill: var(--red-600);
+		}
+	}
+
+	.userItemName {
+		width: 100%;
+		padding: 32px 0px 32px 0;
+		border-right: 0;
+		border-bottom: 1px solid var(--neutral-gray-400);
+		font-weight: 400;
+	}
+
+	.userItemEmailAndUsername {
+		padding: 32px 0px 32px 0px;
+		p {
+			.title {
+				color: var(--main-blue-850-67);
+			}
+		}
+	}
 }

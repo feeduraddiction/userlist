@@ -5,7 +5,7 @@ export interface SetFilterInputAction {
 	payload: string;
 }
 
-export const setFilterInpt = (value: string): SetFilterInputAction => ({
+export const setFilterInput = (value: string): SetFilterInputAction => ({
 	type: SET_FILTER_INPUT,
 	payload: value,
 });

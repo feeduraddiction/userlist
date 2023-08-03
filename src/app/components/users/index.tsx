@@ -22,7 +22,9 @@ export const Users = () => {
 			) : (
 				users.map((user) => <UserItem key={user.id} user={user} />)
 			)}
-			{!users.length && <h3 style={{textAlign: 'center'}}>No users found</h3>}
+			{!users.length && !isLoading && (
+				<h3 style={{ textAlign: 'center' }}>No users found</h3>
+			)}
 		</div>
 	);
 };

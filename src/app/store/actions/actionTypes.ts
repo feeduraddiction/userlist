@@ -3,3 +3,4 @@ export const SET_LOADING = 'SET_LOADING';
 export const SET_DELETED_USER = 'SET_DELETED_USER';
 export const SET_FILTERED_USER = 'SET_FILTERED_USER';
 export const SET_FILTER_INPUT = 'SET_FILTER_INPUT';
+export const RESET_USERS = 'RESET_USERS';

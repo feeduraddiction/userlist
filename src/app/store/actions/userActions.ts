@@ -4,7 +4,16 @@ import {
 	SET_LOADING,
 	SET_DELETED_USER,
 	SET_FILTERED_USER,
+	RESET_USERS,
 } from './actionTypes';
+
+export interface ResetUsersAction {
+	type: typeof RESET_USERS;
+}
+
+export const resetUsers = (): ResetUsersAction => ({
+	type: RESET_USERS,
+});
 
 export interface SetUsersAction {
 	type: typeof SET_USERS;
@@ -50,4 +59,5 @@ export type UserAction =
 	| SetUsersAction
 	| SetLoadingAction
 	| SetDeletedUserAction
-	| setFilteredUsersAction;
+	| setFilteredUsersAction
+	| ResetUsersAction;

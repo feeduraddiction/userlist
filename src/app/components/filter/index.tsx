@@ -3,8 +3,8 @@ import { InputControlled } from '../../shared/input';
 import classes from './styles.module.scss';
 import { Button } from '../../shared/controls';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilterInpt } from '../../store/actions/filterActions';
-import { setFilteredUsers } from '../../store/actions/userActions';
+import { setFilterInput } from '../../store/actions/filterActions';
+import { resetUsers, setFilteredUsers } from '../../store/actions/userActions';
 import { RootState } from '../../store/reducers';
 
 export const UserFilter = () => {
@@ -13,13 +13,13 @@ export const UserFilter = () => {
 		(state: RootState) => state.filter.filterInput
 	);
 	const changeFilterInputHandler = (event: BaseSyntheticEvent) => {
-		dispatch(setFilterInpt(event.currentTarget.value));
+		dispatch(setFilterInput(event.currentTarget.value));
 		dispatch(setFilteredUsers(event.currentTarget.value));
 	};
 
 	const resetHandler = () => {
-		dispatch(setFilterInpt(''));
-		dispatch(setFilteredUsers(''));
+		dispatch(setFilterInput(''));
+		dispatch(resetUsers())
 	};
 	return (
 		<div className={classes.filter}>

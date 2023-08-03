@@ -12,7 +12,6 @@ export const fetchUsers =
 			const response = await getUsers();
 			const users = response.data;
 			dispatch(setUsers(users));
-			dispatch(setFilteredUsers(''));
 			dispatch(setLoading(false));
 		} catch (error) {
 			console.error(error);

@@ -14,11 +14,7 @@ interface ModalOverlayProps {
 }
 
 const Backdrop = ({ onClose }: { onClose: () => void }) => {
-	const closeHandler = () => {
-		console.log('close');
-		onClose();
-	};
-	return <div onClick={closeHandler} className={classes.backdrop} />;
+	return <div onClick={onClose} className={classes.backdrop} />;
 };
 
 const ModalOverlay = ({ children, onClose }: ModalOverlayProps) => {
@@ -36,7 +32,6 @@ const ModalOverlay = ({ children, onClose }: ModalOverlayProps) => {
 
 export const Modal = ({ onClose, children }: ModalProps) => {
 	const closeHandler = () => {
-		console.log('close');
 		onClose();
 		document.body.style.overflow = 'auto';
 	};
