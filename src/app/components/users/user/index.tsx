@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, useState } from 'react';
+import { BaseSyntheticEvent, memo, useState } from 'react';
 import { TrashIcon } from '../../../assets/svg';
 import { User } from '../../../types/user';
 import classes from './styles.module.scss';
@@ -8,7 +8,7 @@ import { setDeletedUser } from '../../../store/actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../store/reducers';
 
-export const UserItem = ({ user }: { user: User }) => {
+const UserItemComponent = ({ user }: { user: User }) => {
 	const dispatch = useDispatch();
 	const highliht = useSelector((state: RootState) => state.filter.filterInput);
 	const [open, setOpen] = useState(false);
@@ -53,3 +53,5 @@ export const UserItem = ({ user }: { user: User }) => {
 		</>
 	);
 };
+
+export const UserItem = memo(UserItemComponent);

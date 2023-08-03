@@ -24,7 +24,7 @@ export const UserFilter = () => {
 	return (
 		<div className={classes.filter}>
 			<InputControlled
-				placeholder="Filter by name, usename or Email"
+				placeholder="Filter by name, username or Email"
 				onChange={changeFilterInputHandler}
 				value={filterInputValue}
 			/>
