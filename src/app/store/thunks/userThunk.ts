@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../reducers';
-import { setFilteredUsers, setLoading, setUsers } from '../actions/userActions';
+import { setLoading, setUsers } from '../actions/userActions';
 import { getUsers } from '../../services';
 
 export const fetchUsers =

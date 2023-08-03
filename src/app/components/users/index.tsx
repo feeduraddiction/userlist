@@ -13,7 +13,7 @@ export const Users = () => {
 	const isLoading = useSelector((state: RootState) => state.user.loading);
 	useEffect(() => {
 		dispatch(fetchUsers());
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<div className={classes.users}>
