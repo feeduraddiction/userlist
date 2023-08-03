@@ -41,7 +41,7 @@ const UserItemComponent = ({ user }: { user: User }) => {
 				</h3>
 				<div className={classes.userItemEmailAndUsername}>
 					<p>
-						<span className={classes.title}> Usernmame: </span>
+						<span className={classes.title}> Username: </span>
 						<HighlightedText text={user.username} highlight={highliht} />
 					</p>
 					<p>
